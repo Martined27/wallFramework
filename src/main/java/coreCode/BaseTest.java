@@ -17,12 +17,12 @@ import java.util.logging.Level;
 public class BaseTest {
 
     private String platname = "Android";
-    private String androidVersion = "6.0";
+    private String androidVersion = "9";
     private String androidVersion2 = "8.1";
     private String tool = "UiAutomator2";
     private String testName = "Untitled";
     private String deviceName = "R1 HD";
-    private String deviceName3 = "Victor Galaxy A50";
+    private String deviceName3 = "P30";
     private String deviceName2 = "HUAWEI Y7";
 
     protected AndroidDriver<AndroidElement> driver = null;
@@ -32,11 +32,11 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() throws MalformedURLException {
-        dc.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName2);
+        dc.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName3);
         //dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("automationName", tool);
         dc.setCapability("platformName", platname);
-        dc.setCapability("platformVersion", androidVersion2);
+        dc.setCapability("platformVersion", androidVersion);
         // dc.setCapability(MobileCapabilityType.UDID, "JND5T19313003519");
         //dc.setCapability("unlockType", "pattern");
         //dc.setCapability("unlockKey", "4257");
