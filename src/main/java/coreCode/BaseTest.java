@@ -2,6 +2,7 @@ package coreCode;
 
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
+import io.appium.java_client.remote.AndroidMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -33,19 +34,12 @@ public class BaseTest {
     @BeforeClass
     public void setUp() throws MalformedURLException {
         dc.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName3);
-        //dc.setCapability("reportDirectory", reportDirectory);
         dc.setCapability("automationName", tool);
         dc.setCapability("platformName", platname);
         dc.setCapability("platformVersion", androidVersion);
-        // dc.setCapability(MobileCapabilityType.UDID, "JND5T19313003519");
-        //dc.setCapability("unlockType", "pattern");
-        //dc.setCapability("unlockKey", "4257");
-        dc.setCapability("newCommandTimeout", 60);
-        dc.setCapability("adbExecTimeout ", 2000);
-        dc.setCapability("appPackage", "com.simpler.dialer");
-        dc.setCapability("appActivity", "com.simpler.ui.activities.ContactsAppActivity");
+        dc.setCapability(AndroidMobileCapabilityType.APP_PACKAGE, "com.eqnesto.wallpaxer");
+        dc.setCapability(AndroidMobileCapabilityType.APP_ACTIVITY, "com.eqnesto.wallpaxer.activities.MainActivity");
         dc.setCapability("noReset", true);
-        //dc.setCapability(MobileCapabilityType.UDID, "T8NVSCSSLJCIZSBE");
 
         service.start();
         driver = new AndroidDriver<>(new URL("http://localhost:4723/wd/hub"), dc);

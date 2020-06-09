@@ -1,5 +1,6 @@
 package coreCode;
 
+import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
@@ -39,7 +40,8 @@ public class BaseActivity {
 
 
     ///Public methods - for create and modify
-
+   public  void searchWall(){driver.executeScript("mobile:performEditorAction", ImmutableMap.of("action", "done"));
+   };
 
     public  void  waitForTextToShow(By locator, String text){
         waitForTextToAppear(locator,text);
