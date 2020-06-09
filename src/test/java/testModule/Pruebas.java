@@ -7,6 +7,7 @@ import io.appium.java_client.android.nativekey.AndroidKey;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.toolBarPage;
 
@@ -24,8 +25,9 @@ public class Pruebas extends BaseTest {
             toolbar.searchBtn.click();
             toolbar.searchTxt.setValue("cat");
             toolbar.searchWall();
-            Thread.sleep(3000);
+            Thread.sleep(8000);
         }catch (Exception e) {
+            Assert.fail("Test Failure");
             e.printStackTrace();
         }
     }

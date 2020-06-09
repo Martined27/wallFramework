@@ -40,7 +40,7 @@ public class BaseActivity {
 
 
     ///Public methods - for create and modify
-   public  void searchWall(){driver.executeScript("mobile:performEditorAction", ImmutableMap.of("action", "done"));
+   public  void searchWall(){driver.executeScript("mobile:performEditorAction", ImmutableMap.of("action", "search"));
    };
 
     public  void  waitForTextToShow(By locator, String text){
