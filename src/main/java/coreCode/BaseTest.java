@@ -18,7 +18,7 @@ import java.util.logging.Level;
 public class BaseTest {
 
     private String platname = "Android";
-    private String androidVersion = "9";
+    private String androidVersion = "10";
     private String androidVersion2 = "8.1";
     private String tool = "UiAutomator2";
     private String testName = "Untitled";

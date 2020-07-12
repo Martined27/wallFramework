@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import pageObjects.imagePage;
 import pageObjects.toolBarPage;
 
 public class Pruebas extends BaseTest {
@@ -18,6 +19,7 @@ public class Pruebas extends BaseTest {
     public void Sample(){
         AppiumDriverLocalService service = AppiumDriverLocalService.buildDefaultService();
         toolBarPage toolbar = new toolBarPage(driver);
+        imagePage imagepage = new imagePage(driver);
 
         try {
             System.out.println("Im inside the test");
@@ -25,7 +27,15 @@ public class Pruebas extends BaseTest {
             toolbar.searchBtn.click();
             toolbar.searchTxt.setValue("cat");
             toolbar.searchWall();
-            Thread.sleep(8000);
+            Thread.sleep(1000);
+            imagepage.wallpaper.click();
+            Thread.sleep(2000);
+            imagepage.setBtn.click();
+            Thread.sleep(2000);
+            imagepage.applyBtn.click();
+            Thread.sleep(2000);
+            imagepage.homescreenBtn.click();
+
         }catch (Exception e) {
             Assert.fail("Test Failure");
             e.printStackTrace();
