@@ -37,6 +37,12 @@ public class imagePage extends BaseActivity {
     @AndroidFindBy(id = "custom_dialog_layout_design_user_input")
     public AndroidElement customDialog;
 
+    @AndroidFindBy(id = "com.eqnesto.wallpaxer:id/lyt_suggestion")
+    public AndroidElement searchLyt;
+
+    @AndroidFindBy(id = "com.eqnesto.wallpaxer:id/lyt_progress")
+    public AndroidElement progressLyt;
+
     @AndroidFindBy(xpath = "//*[@text='Home Screen']")
     public AndroidElement homescreenBtn;
 
@@ -48,4 +54,7 @@ public class imagePage extends BaseActivity {
 
     @AndroidFindBy(id = "img_wallpaper")
     public AndroidElement wallpaper;
+
+    @AndroidFindBy(xpath = "//*[@text='Setting wallpaper…']")
+    public AndroidElement settingTxt;
 }

@@ -6,6 +6,7 @@ import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -25,9 +26,12 @@ public class BaseActivity {
     }
 
 
-   //Core methods - for internal use only.
+   //Core methods - for internal use only. Abstractions.
     protected void waitForElementToAppear(By locator) {
         wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+    protected void waitForElementToDisappear(By locator) {
+        wait.until(ExpectedConditions.not(ExpectedConditions.visibilityOfElementLocated(locator)));
     }
 
     protected void waitForTextToDisappear(By locator, String text) {
@@ -54,9 +58,12 @@ public class BaseActivity {
     public void waitForScreenToLoad(AndroidElement element) { waitForElementToAppear(By.id(element.getAttribute("resource-id")));
     }
 
-    public void waitForScreenToLoadByXpath(AndroidElement element) { waitForElementToAppear(By.xpath(element.getAttribute("xpath")));
+    public void waitForElementToChange(AndroidElement element) { waitForElementToDisappear(By.id(element.getAttribute("resource-id")));
     }
 
+    public void waitForScreenToLoadByXpath(AndroidElement element) { waitForElementToAppear(By.xpath(element.getAttribute("xpath")));
+    }
+    //Web method
     public void waitForScreenToLoad(By locator) {
         waitForElementToAppear(locator);
     }
