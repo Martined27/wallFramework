@@ -43,7 +43,7 @@ public class BaseActivity {
     }
 
 
-    ///Public methods - for create and modify
+    ///Public methods - for create, override and modify
    public  void searchWall(){driver.executeScript("mobile:performEditorAction", ImmutableMap.of("action", "search"));
    };
 
@@ -67,4 +67,5 @@ public class BaseActivity {
     public void waitForScreenToLoad(By locator) {
         waitForElementToAppear(locator);
     }
+
 }
