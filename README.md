@@ -7,8 +7,8 @@ This is a solution framework for functional test case automation of Wallpixer a 
 * Java
 * Appium
 * InteliJ IDEa
-* Allure Reports
-* Appium Studio
+* Allure Reports (not implemented yet)
+* Appium Studio (for inspecting elements)
 * OpenCV4Nodejs
 
 Composed of 10 automated TC to demo the solution approach to the highlighted differences between mobile automation and dev's prior knowledge of web automation.
@@ -23,10 +23,11 @@ Pre-requisistes:
 * Appium v4+
 * ADB
 
+Steps for OPENCV4NODEJS installation
 
 * CMAKE to run scripts
 
-  cmake.org
+  cmake.org, download and install.
   
 * Windows build tools to be able to compile opencv
   
