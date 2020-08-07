@@ -11,7 +11,8 @@ This is a solution framework for functional test case automation of Wallpixer a 
 * Appium Studio (for inspecting elements)
 * OpenCV4Nodejs
 
-Composed of 10 automated TC to demo the solution approach to the highlighted differences between mobile automation and dev's prior knowledge of web automation.
+Composed of 10 automated TC to demo the solution approach of experimenting the differences between mobile automation and dev's prior knowledge of web automation. (WIP)
+
 Configurations needed:
 
 ### In order to run the project correctly you'll need to install few things:
